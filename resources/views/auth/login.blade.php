@@ -19,7 +19,7 @@
             <input type="password" name="password" id="password" value="{{ old('password') }}">
         </div>
 
-        <input type="submit" value="Connexion">
+        <input class="btn-form" type="submit" value="Connexion">
     </form>
 </main>
 @endsection

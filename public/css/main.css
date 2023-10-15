@@ -3,3 +3,34 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+
+footer {
+    text-align: center;
+    margin-block: 2rem;
+}
+
+.container {
+    margin: 3rem auto;
+    width: 90%;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    width: 30%;
+    margin: auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.btn-form {
+    display: block;
+    margin:auto;
+    width: 50%;
+}

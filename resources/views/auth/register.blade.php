@@ -4,6 +4,16 @@
     <h1>Inscription</h1>
 
     <form action="{{ route('auth.register') }}" method="post">
+        @if ($errors->any())
+            <div class="alert">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+
         <div class="form-group">
             <label for="pseudo">Pseudo :</label>
             <input type="text" name="pseudo" id="pseudo" value="{{ old('pseudo') }}">
@@ -15,21 +25,16 @@
         </div>
 
         <div class="form-group">
-            <label for="confirmedEmail">Confirmation de l'e-mail :</label>
-            <input type="email" name="confirmedEmail" id="confirmedEmail" value="{{ old('confirmedEmail') }}">
-        </div>
-
-        <div class="form-group">
             <label for="password">Mot de passe :</label>
             <input type="password" name="password" id="password" value="{{ old('password') }}">
         </div>
 
         <div class="form-group">
             <label for="confirmedPassword">Confirmation du mot de passe :</label>
-            <input type="confirmedPassword" name="confirmedPassword" id="confirmedPassword" value="{{ old('confirmedPassword') }}">
+            <input type="password" name="confirmedPassword" id="confirmedPassword" value="{{ old('confirmedPassword') }}">
         </div>
 
-        <input type="submit" value="S'inscrire">
+        <input class="btn-form" type="submit" value="S'inscrire">
     </form>
 </main>
 @endsection
